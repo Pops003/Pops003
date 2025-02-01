@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoes</title>
+   <link rel="stylesheet" href="/css/Othersstyles.css">
+</head>
+<body>
+    <div class="container">
+        <marquee behaviour="scroll" direction="left"><h1 id="header">All available items</h1></marquee>
+        <div class="items">
+            <div class="item">
+                <img src="/images/K.jpg" alt="Item 1" onclick="openModal('item1')">
+                <div class="item-details">
+                    <h3>Fashion</h3>
+                    <p>Price: $23</p>
+                    <p>Medium size available.</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/L.jpg" alt="Item 2" onclick="openModal('item2')">
+                <div class="item-details">
+                    <h3>Fashion</h3>
+                    <p>Price: $80</p>
+                    <p>Medium size available.</p>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="item">
+                <img src="/images/M.jpg" alt="Item 3" onclick="openModal('item3')">
+                <div class="item-details">
+                    <h3>Fashion</h3>
+                    <p>Price: $120</p>
+                    <p>Medium size available.</p>
+                </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="item">
+                <img src="/images/N.jpg" alt="Item 4" onclick="openModal('item4')">
+                <div class="item-details">
+                    <h3>Fashion</h3>
+                    <p>Price: $200</p>
+                    <p>Medium size available.</p>
+                </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="item">
+                <img src="/images/O.jpg" alt="Item 5" onclick="openModal('item5')">
+                <div class="item-details">
+                    <h3>Fashion</h3>
+                    <p>Price: $35</p>
+                    <p>All sizes available.</p>
+                </div>
+            </div>
+            <!-- Item 6 -->
+            <div class="item">
+                <img src="/images/F.jpg" alt="Item 6" onclick="openModal('item6')">
+                <div class="item-details">
+                    <h3>Fashion</h3>
+                    <p>Price: $100</p>
+                    <p>All sizes available.</p>
+                </div>
+            </div>
+        </div>
+        <a href="/pages/Dresses.html" ><button class="button">Previous Page</button></a>
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modalContent">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div id="modalDetails">
+                <h3 id="modalTitle"></h3>
+                <p id="modalPrice"></p>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openModal(itemId) {
+            // Data for items
+            const items = {
+                item1: {
+                    img: '/images/K.jpg',
+                    title: 'Fashion',
+                    price: 'Price: $23',
+                    description: 'Medium size available'
+                },
+                item2: {
+                    img: '/images/L.jpg',
+                    title: 'Fashion',
+                    price: 'Price: $21',
+                    description: 'Medium size available.'
+                },
+                item3: {
+                    img: '/images/M.jpg',
+                    title: 'Fashion',
+                    price: 'Price: $120',
+                    description: 'Medium size available.'
+                },
+                item4: {
+                    img: '/images/N.jpg',
+                    title: 'Fashion',
+                    price: 'Price: $200',
+                    description: 'Medium size available.'
+                },
+                item5: {
+                    img: '/images/O.jpg',
+                    title: 'Fashion',
+                    price: 'Price: $50',
+                    description: 'All size available.'
+                },
+                item6: {
+                    img: '/images/F.jpg',
+                    title: 'Fashion',
+                    price: 'Price: $60',
+                    description: 'All sizes available.'
+                }
+            };
+
+            // Set modal content based on clicked item
+            const item = items[itemId];
+            document.getElementById('modalImage').src = item.img;
+            document.getElementById('modalTitle').innerText = item.title;
+            document.getElementById('modalPrice').innerText = item.price;
+            document.getElementById('modalDescription').innerText = item.description;
+
+            // Show modal
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script> 
+</body>
+</html>

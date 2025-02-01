@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fhelyshia collections</title>
+    <link rel="stylesheet" href="/css/New user styles.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/sql-wasm.js"></script>
+    <script src="/javascript/script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Fhelyshia's collections</div>
+        <div class="nav">
+          <a href="/pages/Login page.html">Shoes</a>
+          <a href="/pages/Login page.html">Dresses</a>
+          <a href="/pages/Login page.html">Others</a>
+        </div>
+    </div> 
+    <div class="User-data">
+        <h3 class="head2">Please fill out this form</h3>
+        <!-- <form> -->
+            <input type="text" id="first-name" placeholder="First Name" required>
+            <input type="text" id="last-name" placeholder="Last Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Create a New Password" required>
+            <div>
+                <input type="checkbox" id="show-password-checkbox" onclick="togglePassword()">
+                <label for="show-password-checkbox" class="show-password">Show Password</label>
+            </div>
+            <br/>
+            Have an <a href="/pages/Login page.html"> account?</a>
+            <br />
+            <button type="submit" onclick="registerUser()">Done</button>
+        <!-- </form> -->
+        <div id="alert" class="alert">Username already exists</div>
+    </div>
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var checkbox = document.querySelector("input[type='checkbox']");
+            if (checkbox.checked) {
+                passwordField.type = "text"; // Show the password
+            } else {
+                passwordField.type = "password"; // Hide the password
+            }
+        }
+    </script>
+</body>
+</html>

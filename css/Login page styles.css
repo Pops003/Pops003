@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    font-family: Arial, sans-serif;
+ background: url(/images/123.jpg) no-repeat center center/cover; 
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.User-data {
+    background: rgba(255, 255, 255, 0.685);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.inline{
+  display: inline;
+}
+
+.User-data input,
+.User-data button {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+.User-data button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    width:40%;
+}
+.User-data button:hover {
+    background-color: #0056b3;
+}
+.show-password{
+font-size: 14px;
+color: #0051cc;
+text-align: right;
+}
+.head2{
+color: #0051cc;
+}
+
+.alert {
+    display: none; /* Hidden by default */
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: #f44336; /* Red background for error */
+}
